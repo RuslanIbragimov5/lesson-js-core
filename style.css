@@ -1,0 +1,99 @@
+body,
+html {
+	width: 100%;
+	background: rgb(0,255,250);
+	background: linear-gradient(15deg, rgba(0,255,250,0.1) 0%, rgba(217,255,142,0.2) 37%, rgba(214,255,154,0.3) 57%, rgba(0,184,63,0.3) 91%);
+	font-size: 16px;
+}
+.person {
+	max-width: 100%;
+	display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.person__info {
+	margin-top: 32px;
+}
+.person__contacts {
+	font-size: 16px;
+	color: #000;
+}
+.person__details {
+	font-size: 16px;
+	color: #000;
+	padding-top: 32px;
+	padding-left: 357px;
+	padding-right: 357px;
+}
+.avatar {
+	padding-right: 32px;
+}
+.avatar__picture {
+	border-radius: 640px 640px 640px 640px;
+	border-style: solid;
+	border-color: #FFF;
+	border-width: 32px 32px 32px 32px;
+	margin-left: 360px;
+
+}
+.contacts {
+	font-size: 16px;
+	color: #000;
+}
+.contacts__name {
+	font-size: 32px;
+	color: #000;
+	font-weight: 600;
+}
+.contacts__role {
+	font-size: 19.2px;
+	color: #000;
+	font-weight: 600;
+	margin-bottom: 32px;
+}
+.contacts__item {
+	font-size: 16px;
+	color: #000;
+}
+.contacts__title {
+	font-size: 16px;
+	color: #000;
+	font-weight: 600;
+}
+.contacts__title:after {
+	font-size: 16px;
+	color: #000;
+}
+.contacts__link {
+	font-size: 16px;
+	color: gray;
+}
+.paragraph {
+	font-size: 16px;
+	color: #000;
+	padding-bottom: 16px;
+}
+.paragraph_last {
+	font-size: 16px;
+	color: #000;
+	padding-bottom: 48px;
+}
+@media screen and (max-width: 376px) {
+    .person {
+		flex-direction: column;
+    }
+	.avatar__picture {
+		margin-left: 23px;
+	}
+	.person__info {
+		padding-bottom: 32px;
+	}
+	.person__details {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	.contacts__name {
+		text-align: center;
+	}
+
+}
