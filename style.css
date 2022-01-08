@@ -36,6 +36,10 @@ html {
 .avatar__picture {
 	border-radius: 50%;
 	border: 32px solid #fff;
+	transition: transform .8s ease-in-out;
+}
+.avatar__picture:hover {
+	transform: rotate(180deg);
 }
 .contacts {
 	display: flex;
