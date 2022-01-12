@@ -6,44 +6,103 @@ html {
 	font-size: 16px;
 }
 .person {
-	max-width: 100%;
+	width: 800px;
 	display: flex;
-    align-items: center;
+	flex-direction: row;
     flex-wrap: wrap;
+	margin: 0 auto;
+	font-size: 16px;
+	padding-top: 32px;
 }
 .person__info {
-	margin-top: 32px;
+	flex: 1 0 50%;
+	padding-right: 32px;
+	margin-bottom: 32px;
 }
 .person__contacts {
-	font-size: 16px;
-	color: #000;
+	flex: 1 0 50%;
+	margin-bottom: 32px;
 }
 .person__details {
-	font-size: 16px;
-	color: #000;
-	padding-top: 32px;
-	padding-left: 357px;
-	padding-right: 357px;
+	flex: 0 1 100%;
 }
 .avatar {
-	padding-right: 32px;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	margin-right: 16px;
+	align-items: center;
 }
 .avatar__picture {
-	border-radius: 640px 640px 640px 640px;
-	border-style: solid;
-	border-color: #FFF;
-	border-width: 32px 32px 32px 32px;
-	margin-left: 360px;
-
+	border-radius: 50%;
+	border: 32px solid rgb(12, 212, 186);
+	animation: scale 4s infinite;
 }
+@keyframes scale {
+	0%{
+	transform: scale(0.9); 
+	opacity:0.5; 
+	border:5px solid rgba(10, 216, 96, 0.644); 
+	box-shadow:0px 0px 0px  3px rgba(10, 216, 96, 0.836); 
+	}
+	50%{
+	transform: scale(1.2);
+	opacity:1;
+	border:8px solid  rgba(216, 249, 196, 0.247);
+	box-shadow:0px 0px 0px  8px rgba(216, 249, 196, 0.938);
+	}
+	100%{
+	transform: scale(0.9);
+	opacity:0.5;
+	border:5px solid rgba(216, 249, 196, 0.39);
+	box-shadow:0px 0px 0px  3px rgba(216, 249, 196, 0.89);
+	}
+	}
 .contacts {
-	font-size: 16px;
-	color: #000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
 }
 .contacts__name {
-	font-size: 32px;
+	color: transparent;
+    -webkit-text-stroke: 1px rgba(220, 224, 181, 0.884);
+    position: relative;
+	font-size: 45px;
 	color: #000;
 	font-weight: 600;
+}
+.contacts__name:after{
+    content: attr(data-word);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(189, 197, 141, 0.918);
+    animation: contacts__name 2s ease-in-out infinite forwards;
+}
+@keyframes contacts__name{
+    0%, 100% {
+        clip-path: polygon(0 66%, 11% 59%, 18% 51%, 26% 46%, 35% 41%, 48% 44%, 55% 54%, 63% 63%, 76% 60%, 82% 50%, 92% 48%, 100% 53%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0 66%, 8% 74%, 17% 77%, 28% 70%, 35% 57%, 48% 44%, 56% 39%, 69% 41%, 75% 47%, 84% 60%, 92% 61%, 100% 53%, 100% 100%, 0% 100%);
+    }
+}
+.section {
+    height: 100vh;
+    font-size: 80px;
+    font-weight: bold;
+    transition: all 200ms;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
 }
 .contacts__role {
 	font-size: 19.2px;
@@ -69,12 +128,12 @@ html {
 	color: gray;
 }
 .paragraph {
-	font-size: 16px;
+	font-size: 18px;
 	color: #000;
-	padding-bottom: 16px;
+	margin-bottom: 16px;
 }
 .paragraph_last {
-	font-size: 16px;
+	font-size: 18px;
 	color: #000;
 	padding-bottom: 48px;
 }
